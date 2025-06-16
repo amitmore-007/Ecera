@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api'
+  baseURL: 'https://ideatracker-1c5g.onrender.com/api'
 })
 
 // Request interceptor to add token
