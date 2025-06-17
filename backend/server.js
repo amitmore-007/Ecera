@@ -13,9 +13,13 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 
 app.use(cors({
-  origin: '  http://localhost:3000/', // Replace with your actual frontend domain
+  origin: [
+    'https://frontend-service-u8g7.onrender.com',
+    'http://localhost:3000' // keep this for local development
+  ],
   credentials: true
-}))
+}));
+
 
 app.use(express.json());
 
