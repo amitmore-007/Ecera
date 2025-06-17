@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: [
-    
+    'https://ideatracker-ecera.onrender.com',
     'http://localhost:3000' // keep this for local development
   ],
   credentials: true
