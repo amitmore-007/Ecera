@@ -2,19 +2,21 @@ services:
   - type: web
     name: backend-service
     env: node
+    plan: free
     buildCommand: cd backend && npm install
     startCommand: cd backend && node server.js
     envVars:
       - key: MONGODB_URI
-        value: mongodb+srv://amitmore:amore007@cluster0.4qpnomv.mongodb.net/test?retryWrites=true&w=majority
+        value: your-mongodb-uri
       - key: JWT_SECRET
-        value: 0ef754dd3c0bace2ce5d8fdfc0aea985c4ae0a10af673cc4d236e1ce97b5e439
+        value: your-jwt-secret
       - key: NODE_ENV
         value: production
 
   - type: web
     name: frontend-service
     env: static
+    plan: free
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/dist
     routes:
